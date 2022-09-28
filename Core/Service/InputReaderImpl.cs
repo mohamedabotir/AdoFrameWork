@@ -11,7 +11,7 @@ namespace AdoFrameWork.Core
 
         public int StartScreen()
         {
-            int optionsCount = 2;
+            int optionsCount = Enum.GetValues(typeof(Oprtation)).Length;
 
             int selected = 0;
 
@@ -59,6 +59,6 @@ namespace AdoFrameWork.Core
     }
     enum Oprtation
     {
-        SetQueryString, RetreiveScalarValue
+        SetQueryString, RetreiveScalarValue, Insert
     }
 }

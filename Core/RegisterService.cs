@@ -11,7 +11,7 @@ namespace AdoFrameWork.Core
         {
 
             service.AddTransient<InputReader, InputReaderImpl>();
-            service.AddTransient<Connection, ConnectionImpl>();
+            service.AddSingleton<Connection, ConnectionImpl>();
             return service;
         }
 

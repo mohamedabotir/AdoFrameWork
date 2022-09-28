@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using AdoFrameWork.Abstract.Services;
@@ -15,14 +16,14 @@ namespace AdoFrameWork.Core
         {
             _serviceProvider = services;
         }
-        public void BuildScreen()
+        public async void BuildScreen()
         {
 
             var provider = GetProvider();
 
             var input = provider.GetRequiredService<InputReader>();
             var result = input.StartScreen();
-            OperateSelected(result);
+            await OperateSelected(result);
         }
         private IServiceProvider GetProvider()
         {
@@ -30,28 +31,44 @@ namespace AdoFrameWork.Core
             var provider = serviceScope.ServiceProvider;
             return provider;
         }
-        public void OperateSelected(int option)
+        public async Task OperateSelected(int option)
         {
 
             switch (option)
             {
                 case 0:
-                    SetConnection();
+                    await SetConnection();
                     break;
                 case 1:
+                    await SubmitQuery();
+                    break;
+                case 2:
+                    await InsertQuery();
                     break;
                 default:
                     break;
             }
+            BuildScreen();
         }
 
-        private async void SetConnection()
+        private async Task SetConnection()
         {
             Console.WriteLine("=======QueryString=====");
             var input = Console.ReadLine();
             var result = await GetProvider().GetRequiredService<Connection>().BuildConnection(input);
             if (result)
                 Console.WriteLine("Connected");
+        }
+
+        private async Task SubmitQuery()
+        {
+            var sql = Console.ReadLine();
+            var result = await GetProvider().GetRequiredService<Connection>().SubmitQueryScaler(sql);
+
+        }
+        private async Task InsertQuery()
+        {
+            await GetProvider().GetRequiredService<Connection>().Insert();
         }
     }
 }
