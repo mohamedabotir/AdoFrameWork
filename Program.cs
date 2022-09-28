@@ -1,14 +1,29 @@
-﻿using AdoFrameWork.Services;
-using static AdoFrameWork.Core.RegisterService;
+﻿using static AdoFrameWork.Core.RegisterService;
 using AdoFrameWork.Core;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+
 internal class Program
 {
     private static void Main(string[] args)
     {
-        RegisterServices();
-        InputReader input = new InputReaderImpl();
+        var build = new ConfigurationBuilder();
+        buildConfig(build);
+        var host = Host.CreateDefaultBuilder()
+        .ConfigureServices((config, service) =>
+        {
+            service.RegisterServices();
+        }).Build();
 
-        input.StartScreen();
-        DisposeServices();
+        var startup = new Startup(host.Services);
+        startup.BuildScreen();
+        host.RunAsync();
+    }
+    private static void buildConfig(IConfigurationBuilder builder)
+    {
+        builder.SetBasePath(Directory.GetCurrentDirectory())
+        .AddJsonFile("appsettings.json", false, true)
+        .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json")
+        .AddEnvironmentVariables();
     }
 }

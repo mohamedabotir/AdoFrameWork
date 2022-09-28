@@ -1,32 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AdoFrameWork.Core.Service;
 using AdoFrameWork.Services;
 using Microsoft.Extensions.DependencyInjection;
-
+using AdoFrameWork.Abstract.Services;
 namespace AdoFrameWork.Core
 {
     public static class RegisterService
     {
-        private static IServiceProvider _serviceProvider;
 
-        public static void RegisterServices()
+        public static IServiceCollection RegisterServices(this IServiceCollection service)
         {
-            var services = new ServiceCollection();
-            services.AddSingleton<InputReader, InputReaderImpl>();
-            _serviceProvider = services.BuildServiceProvider(true);
+
+            service.AddTransient<InputReader, InputReaderImpl>();
+            service.AddTransient<Connection, ConnectionImpl>();
+            return service;
         }
-        public static void DisposeServices()
-        {
-            if (_serviceProvider == null)
-            {
-                return;
-            }
-            if (_serviceProvider is IDisposable)
-            {
-                ((IDisposable)_serviceProvider).Dispose();
-            }
-        }
+
     }
 }
