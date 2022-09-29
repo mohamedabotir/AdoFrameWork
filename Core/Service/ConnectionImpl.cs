@@ -1,4 +1,5 @@
 using AdoFrameWork.Abstract.Services;
+using AdoFrameWork.Core.Builders;
 using System.Data.SqlClient;
 
 namespace AdoFrameWork.Core.Service
@@ -72,41 +73,12 @@ namespace AdoFrameWork.Core.Service
                 Console.WriteLine("Inserted");
 
         }
-        private Task<bool> InsertParser(string[] values, string[] param, string table)
+        private async Task<bool> InsertParser(string[] values, string[] param, string table)
         {
-            var query = $"insert into {table} (";
-            for (var i = 0; i < param.Length - 1; i++)
-            {
-                query += $"{param[i]}" + ',';
-            }
-            query += $"{param[param.Length - 1]}" + ") values(";
-            for (var i = 0; i < param.Length - 1; i++)
-            {
-                query += $"@{param[i]}" + ',';
-            }
-            query += $"@{param[param.Length - 1]}" + ")";
-            try
-            {
-                using (var SqlCommand = new SqlCommand(query, Connection))
-                {
-                    for (var i = 0; i < values.Length; i++)
-                    {
-                        SqlCommand.Parameters.Add(new SqlParameter($"@{param[i]}", values[i]));
-                        Console.WriteLine(values[i]);
-                    }
-                    var execute = (int)SqlCommand.ExecuteNonQuery();
-                    Console.WriteLine(execute);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.BackgroundColor = ConsoleColor.Red;
-                Console.WriteLine(ex);
-                return Task.FromResult(false);
-            }
-            Console.WriteLine(query);
-            //insert into products ()
-            return Task.FromResult(true);
+            var queryBuilder = new InsertBuilder(Connection);
+            var result = await queryBuilder.InsertInto(table, param)
+             .Values(values);
+            return result;
         }
     }
 }
