@@ -58,7 +58,7 @@ namespace AdoFrameWork.Core.Service
             }
         }
 
-        public async Task Insert()
+        public async Task<bool> Insert()
         {
             Console.WriteLine("Enter Query Parameter");
 
@@ -69,11 +69,11 @@ namespace AdoFrameWork.Core.Service
 
             var values = Console.ReadLine().Split(" ");
             var result = await InsertParser(values, param, query);
-            if (result)
-                Console.WriteLine("Inserted");
+            Console.WriteLine($"Insert Status:{result}");
+           return result;
 
         }
-        private async Task<bool> InsertParser(string[] values, string[] param, string table)
+        public async Task<bool> InsertParser(string[] values, string[] param, string table)
         {
             var queryBuilder = new InsertBuilder(Connection);
             var result = await queryBuilder.InsertInto(table, param)

@@ -19,7 +19,7 @@ public class ConnectionTest
     public async Task OpenConnectionSuccess()
     {
         var connection = new ConnectionImpl();
-        var result = await connection.BuildConnection("Server=.;Database=SportsStore;Trusted_Connection=True;");
+        var result = await connection.BuildConnection("Server=.;Database=master;Trusted_Connection=True;");
         Assert.That(true, Is.EqualTo(result));
     }
 }

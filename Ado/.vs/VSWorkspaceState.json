@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Abstract",
+    "\\Abstract\\Services",
+    "\\Core",
+    "\\Core\\Service"
+  ],
+  "SelectedNode": "\\Core\\Service\\ConnectionImpl.cs",
+  "PreviewInSolutionExplorer": false
+}

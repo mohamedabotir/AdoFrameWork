@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\AdoFrameWork.csproj": {}
+    "C:\\Users\\health\\Desktop\\AdoFrameWork\\Ado\\AdoFrameWork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\AdoFrameWork.csproj": {
+    "C:\\Users\\health\\Desktop\\AdoFrameWork\\Ado\\AdoFrameWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\AdoFrameWork.csproj",
+        "projectUniqueName": "C:\\Users\\health\\Desktop\\AdoFrameWork\\Ado\\AdoFrameWork.csproj",
         "projectName": "AdoFrameWork",
-        "projectPath": "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\AdoFrameWork.csproj",
+        "projectPath": "C:\\Users\\health\\Desktop\\AdoFrameWork\\Ado\\AdoFrameWork.csproj",
         "packagesPath": "C:\\Users\\health\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\obj\\",
+        "outputPath": "C:\\Users\\health\\Desktop\\AdoFrameWork\\Ado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\health\\AppData\\Roaming\\NuGet\\NuGet.Config",
