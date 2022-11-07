@@ -83,6 +83,6 @@ namespace AdoFrameWork.Core.Service
     }
 }
 /*
-Server=DESKTOP-R0GTE5O;Database=SportsStore;Trusted_Connection=True;
+Server=.;Database=master;Trusted_Connection=True;
 
 */

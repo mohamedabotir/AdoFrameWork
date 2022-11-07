@@ -10,6 +10,7 @@ namespace AdoFrameWork.Abstract.Services
         public SqlConnection Connection { get; set; }
         Task<bool> BuildConnection(string connectionQuery);
         Task<bool> SubmitQueryScaler(string query);
+        Task<object> ExecuteProcedure(string query);
         Task Insert();
     }
 }

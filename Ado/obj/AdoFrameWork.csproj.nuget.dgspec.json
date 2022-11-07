@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\H\\AdoFrameWork\\Ado\\AdoFrameWork.csproj": {}
+    "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\AdoFrameWork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\H\\AdoFrameWork\\Ado\\AdoFrameWork.csproj": {
+    "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\AdoFrameWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\H\\AdoFrameWork\\Ado\\AdoFrameWork.csproj",
+        "projectUniqueName": "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\AdoFrameWork.csproj",
         "projectName": "AdoFrameWork",
-        "projectPath": "C:\\Users\\H\\AdoFrameWork\\Ado\\AdoFrameWork.csproj",
-        "packagesPath": "C:\\Users\\H\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\H\\AdoFrameWork\\Ado\\obj\\",
+        "projectPath": "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\AdoFrameWork.csproj",
+        "packagesPath": "C:\\Users\\health\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\health\\Desktop\\AdoFrameWork\\ado\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\H\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\health\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -71,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
