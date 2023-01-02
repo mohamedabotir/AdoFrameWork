@@ -1,0 +1,32 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: test
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore ./Ado
+    - name: Restore dependencies
+      run: dotnet restore ./Ado.Test
+    - name: Build
+      run: dotnet build ./Ado --no-restore
+    - name: Build
+      run: dotnet build ./Ado.Test --no-restore
+    - name: Test
+      run: dotnet test ./Ado.Test --no-build --verbosity normal
