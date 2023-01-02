@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rha9cuGvNqAXKVclhQF9g3kjgzfc5vHzpKmWjYGJlFMlUYLIyYVAjsd9cOaGKmoYWsRkPZaMO/iNfLuPdkqd9A==",
+  "dgSpecHash": "irtALmELBlLnBKE0YbjPt46fZ+WiP4I6AUeJFSx5w5a1TIXixvYbR7JKfup83DnLmjCBrFxITFjPpno0UD/7fw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Health\\Desktop\\AdoFrameWork\\ado\\AdoFrameWork.csproj",
+  "projectFilePath": "C:\\Users\\Health\\Desktop\\AdoFrameWork\\Ado\\AdoFrameWork.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Health\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0-rc.1.22426.10\\microsoft.extensions.configuration.7.0.0-rc.1.22426.10.nupkg.sha512",
     "C:\\Users\\Health\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0-rc.1.22426.10\\microsoft.extensions.configuration.abstractions.7.0.0-rc.1.22426.10.nupkg.sha512",

@@ -18,7 +18,7 @@ namespace AdoFrameWork.Core.Service
             QueryString = query;
         }
 
-        public Task<bool> BuildConnection(string connectionQuery)
+        public virtual Task<bool> BuildConnection(string connectionQuery)
         {
             QueryString = connectionQuery;
             try
@@ -58,7 +58,7 @@ namespace AdoFrameWork.Core.Service
             }
         }
 
-        public async Task<bool> Insert()
+        public virtual async Task<bool> Insert()
         {
             Console.WriteLine("Enter Query Parameter");
 
@@ -70,10 +70,10 @@ namespace AdoFrameWork.Core.Service
             var values = Console.ReadLine().Split(" ");
             var result = await InsertParser(values, param, query);
             Console.WriteLine($"Insert Status:{result}");
-           return result;
+            return result;
 
         }
-        public async Task<bool> InsertParser(string[] values, string[] param, string table)
+        public virtual async Task<bool> InsertParser(string[] values, string[] param, string table)
         {
             var queryBuilder = new InsertBuilder(Connection);
             var result = await queryBuilder.InsertInto(table, param)
