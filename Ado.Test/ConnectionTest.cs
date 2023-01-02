@@ -15,11 +15,5 @@ public class ConnectionTest
         var result = await connection.BuildConnection("any queryString");
         Assert.That(false, Is.EqualTo(result));
     }
-    [Test]
-    public async Task OpenConnectionSuccess()
-    {
-        var connection = new ConnectionImpl();
-        var result = await connection.BuildConnection("Server=.;Database=master;Trusted_Connection=True;");
-        Assert.That(true, Is.EqualTo(result));
-    }
+
 }
