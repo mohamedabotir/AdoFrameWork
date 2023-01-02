@@ -6,7 +6,8 @@ implement ado framework main functionality
 ![GitHub last commit](https://img.shields.io/github/last-commit/mohamedabotir/AdoFrameWork)
 ![GitHub followers](https://img.shields.io/github/followers/mohamedabotir?style=social)
 ![GitHub Repo stars](https://img.shields.io/github/stars/mohamedabotir/AdoFrameWork?style=social)
-  
+![example workflow](https://github.com/mohamedabotir/AdoFrameWork/actions/workflows/dotnet.yml/badge.svg)
+
 ## Add ExecuteScaler as Return Result
 - Set ConnectionString
 - Insert Statement to specific table 
