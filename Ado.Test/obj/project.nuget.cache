@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "E33xCLxZ1K3nC7zkl7ATfXjECmwQO3dO62OTEgIlEOzZv8f4StE5SeMbX6qn2uqBqVceBkxfkNpC1MqzRK79zw==",
+  "dgSpecHash": "yHxkbNCryzV+8RgBRGGVGb7G9frQ+//BCpwTmkoU70J5ScXxO7UpLKV2fcbBGrcMXf5PVT24kJH/LSV1nFFzSA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Health\\Desktop\\AdoFrameWork\\Ado.Test\\Ado.Test.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Health\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Health\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\Health\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
     "C:\\Users\\Health\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
@@ -38,6 +39,7 @@
     "C:\\Users\\Health\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.11.0\\microsoft.testplatform.objectmodel.16.11.0.nupkg.sha512",
     "C:\\Users\\Health\\.nuget\\packages\\microsoft.testplatform.testhost\\16.11.0\\microsoft.testplatform.testhost.16.11.0.nupkg.sha512",
     "C:\\Users\\Health\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Health\\.nuget\\packages\\moq\\4.18.4\\moq.4.18.4.nupkg.sha512",
     "C:\\Users\\Health\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\Health\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Health\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
